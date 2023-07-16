@@ -1,8 +1,7 @@
 import Player from '@vimeo/player';
-var throttle = require('lodash.throttle');
+import throttle from 'lodash.throttle';
 
-let currentTime = localStorage.getItem("videoplayer-current-time");
-currentTime ||= 0;
+let currentTime = localStorage.getItem("videoplayer-current-time") || 0;
 
 const iframe = document.querySelector('iframe');
 const player = new Player(iframe);
